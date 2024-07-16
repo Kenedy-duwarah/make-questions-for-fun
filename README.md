@@ -13,7 +13,7 @@ You can view a live demo [here](#) (replace with your live demo link if availabl
 
 ## Installation
 
-No installation required, simply open `index.html` in your web browser.
+No installation required, simply open `question.html` in your web browser.
 
 ## License
 
