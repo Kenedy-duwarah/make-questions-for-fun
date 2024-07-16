@@ -1,20 +1,92 @@
-# Question Generating
+<!DOCTYPE html>
+<html lang="en">
 
-This project demonstrates a simple web interface to generate questions based on user input.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generating </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #generatedQuestion {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
 
-## Usage
+<body>
+    <div class="container">
+        <h1>Question Generate 😄</h1>
+        <form id="questionForm">
+            <label for="questionInput">Enter your question:</label>
+            <input type="text" id="questionInput" required>
+            <button type="submit">Generate Question</button>
+        </form>
+        <div id="generatedQuestion"></div>
+    </div>
+    <script>
+        document.getElementById('questionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-1. **Enter Your Question**: Fill in the input field with your question.
-2. **Generate Question**: Click the "Generate Question" button to see a generated question based on your input.
+            const questionInput = document.getElementById('questionInput').value;
 
-## Demo
+            // Simulate API call
+            generateQuestion(questionInput);
+        });
 
-You can view a live demo [here](#) (replace with your live demo link if available).
+        function generateQuestion(input) {
+            // Simulating a response from an API
+            const generatedResponse = `Generated question based on your input: ${input}?`;
 
-## Installation
+            document.getElementById('generatedQuestion').textContent = generatedResponse;
+        }
+    </script>
+</body>
 
-No installation required, simply open `question.html` in your web browser.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+</html>
